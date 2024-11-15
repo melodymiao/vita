@@ -21,7 +21,7 @@ const Header = ({ currentPage }) => {
             <Link to="/decal">Decal</Link>
             <div className="underline"></div>
           </div>
-          <Link to="/donate">Donate</Link>
+          <Link to="/donate" id="donate-button2">Donate</Link>
         </div>
       </section>
     </>
