@@ -36,6 +36,11 @@
     transition: all 0.25s ease;
 }
 
+/* page selection */
+.active .underline {
+    background: var(--main);
+}
+
 .nav-button {
     margin-top: 8px;
 }
@@ -45,11 +50,7 @@
 }
 
 .nav-button:hover .nav-text{
-    color: black;
-}
-
-.nav-button:hover .underline{
-    background: var(--main);
+    color: #242424;
 }
 
 /* donate button */
@@ -69,7 +70,7 @@
 }
 
 
-/* lowkey better??? */
+/* lowkey better donate button??? */
 #donate-button2 {
     padding: 0.5em 1.5em;
     background: transparent;
