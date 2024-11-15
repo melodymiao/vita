@@ -40,11 +40,11 @@
     margin-top: 8px;
 }
 
-.nav-button a {
-    margin: 12px;
+.nav-text {
+    margin: 0 12px;
 }
 
-.nav-button a:hover {
+.nav-button:hover .nav-text{
     color: black;
 }
 

@@ -9,18 +9,19 @@ const Header = ({ currentPage }) => {
       <section className='header-section'>
         <img src='logo-campanile-i.png' className='logo' />
         <div className='nav-buttons'>
-          <div className='nav-button'>
-            <Link to="/">Home</Link>
+          <Link to="/" className='nav-button'>
+            <div className='nav-text'>Home</div>
             <div className="underline"></div>
-          </div>
-          <div className='nav-button'>
-            <Link to="/free-tax-filing">Free Tax Filing</Link>
+          </Link>
+          <Link to="/free-tax-filing" className='nav-button'>
+            <div className='nav-text'>Free Tax Filing</div>
             <div className="underline"></div>
-          </div>
-          <div className='nav-button'>
-            <Link to="/decal">Decal</Link>
+          </Link>
+          <Link to="/decal" className='nav-button'>
+            <div className='nav-text'>Decal</div>
             <div className="underline"></div>
-          </div>
+          </Link>
+
           <Link to="/donate" id="donate-button2">Donate</Link>
         </div>
       </section>
