@@ -1,8 +1,53 @@
-.header-links {
-    display: flex;
-    justify-content: space-between;
+:root {
+    --main: #2A9D6D;
 }
 
 .header-section {
-    padding: 2em 0;
+    padding: 1em 0;
+    width: 100vw;
+    margin-left: calc((100vw - 100%) / -2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 5px var(--main);
+}
+
+.nav-buttons {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    margin-right: 5em;
+    font-size: 1em;
+}
+
+.logo {
+    margin-left: 2em;
+    height: 60px;
+}
+
+/* Link styles */
+.underline {
+    width: 100%;
+    height: 3px;
+    background: transparent;
+    border-radius: 100px;
+    transition: all 0.25s ease;
+}
+
+.nav-button {
+    margin-top: 8px;
+}
+
+.nav-button a {
+    margin: 12px;
+}
+
+.nav-button a:hover {
+    color: black;
+}
+
+.nav-button:hover .underline{
+    background: var(--main);
 }
