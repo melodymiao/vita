@@ -1,6 +1,6 @@
 .donate {
     width: 100vw;
-    margin-left: calc((100vw - 100%) / -2);
+    /* margin-left: calc((100vw - 100%) / -2); */
     background: url('donate-background.png');
     height: calc(100vh - (65px + 2em));
 }

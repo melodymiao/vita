@@ -28,12 +28,9 @@ a:hover {
   color: #2a9d6d;
 }
 
-body {
-  padding: 0 calc((100vw - 1160px)/2);
-}
-
 section {
   outline: 4px dotted #2A9D6D;
+  padding: 0 calc((100vw - 1160px)/2);
 }
 
 h1 {

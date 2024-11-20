@@ -7,7 +7,7 @@ const Donate = () => {
     return (
     <>
     <Header currentPage="donate"/>
-    <section className="donate">
+    <div className="donate">
         <div className="donate-content">
             <div className="explanatory-text">
                 <p id="header">Donate</p>
@@ -18,7 +18,7 @@ const Donate = () => {
                 <p>Under Student Organization Name, please enter: “Volunteer Income Tax Assistance Program”</p>
             </div>
         </div>
-    </section>
+    </div>
     <Footer />
     </>
 );
