@@ -67,10 +67,6 @@
     }
 }
 
-#map {
-    border-radius: 30px;
-    margin-right: 150px;
-    }
 .img {
     max-width: 400px;
     max-height: 400px;
@@ -81,6 +77,8 @@
     line-height: 20px;
     max-width: 40%;
 }
+
+/* This is the requirements section */
 
 #requirements-section {
     display: flex;
@@ -119,6 +117,8 @@
 
 }
 
+/* This is the services locations section */
+
 #services-locations-section {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -131,6 +131,11 @@
     margin-right:-5vw;
     margin-left: -5vw;
 }
+
+#map {
+    border-radius: 30px;
+    margin-right: 150px;
+    }
 
 #services {
     flex-direction: column;
@@ -180,6 +185,64 @@ button {
     width: 500px;
     padding-bottom: 10px;
     padding-top: 10px;
+}
+
+/* This is the free software section */
+
+#free-software {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 15vw;
+    padding-left: 8vw;
+    padding-bottom: 20vw;
+    gap: 20vw;
+
+}
+
+#free-software-text {
+    margin-top: 30px;
+    align-content: center;
+}
+
+#free-software-buttons {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#federal-return {
+    padding: 10px;
+    border: 2px solid rgb(188, 188, 188);
+    border-radius: 30px;
+    padding: 0.8em 2.2em;
+}
+
+#state-return {
+    padding: 10px;
+    border: 2px solid rgb(188, 188, 188);
+    border-radius: 30px;
+    padding: 0.8em 2.2em;
+}
+
+#both {
+    padding: 10px;
+    border: 2px solid rgb(188, 188, 188);
+    border-radius: 30px;
+    padding: 0.8em 2.2em;
+}
+
+#free-software-buttons h4 {
+    margin-bottom: 10px;
+
+}
+
+#both-section {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 
