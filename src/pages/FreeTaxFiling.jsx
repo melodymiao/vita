@@ -9,7 +9,8 @@ import money from './money.png'
 import React, { useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import icon from "./pin.webp"
+import icon from "./pin.webp";
+import { Link } from 'react-router-dom';
 
 
 
@@ -138,12 +139,16 @@ const FreeTaxFiling = () => {
                 <h3>Find a location near you</h3>
                 <div id="map" style={{ height: '400px', width: '500px' }}></div>
                 <div id="buttons">
-                        <Button buttonText="VITA sites" linkTo="https://www.someurl.com"/>
-
-                    
-                    <Button buttonText="Virtual tax preparation" linkTo="https://www.someurl.com"/>
+                    <Button buttonText="VITA sites" linkTo="https://www.someurl.com"/>
+                    <Button buttonText="Virtual tax preparation sites" linkTo="https://www.someurl.com"/>
                 </div>
-                <Button buttonText="United Way Bay Area Free Tax Help Sites" linkTo="https://www.someurl.com"/>
+                <div id="button-bottom">
+                    <Link className="button-link" to="https://www.someurl.com">
+                        <button className="button">United Way Bay Area Free Tax Help Sites</button>
+                    </Link>
+                    {/* <Button buttonText="United Way Bay Area Free Tax Help Sites" linkTo="https://www.someurl.com"/> */}
+
+                </div>
             </div>
         </div> 
     </section>
