@@ -1,17 +1,16 @@
 
 #title-section {
-    background-color: #2A9D6D;
+    
+    background-image: radial-gradient( farthest-side, #F4F0E4, #EFFFF7);
     display: flex;
     flex-direction: row;
 
-    padding-right: 30px;
+    padding-right: -5vw;
     padding-top: 100px;
-    padding-left: 50px;
-    padding-bottom: 30px;
+    padding-left: -50px;
+    padding-bottom: 150px;
     gap: calc(100px + 2vw);
-    color: white;
-
-    box-sizing: border-box;
+    color: black;
 }
 
 @media (max-width: 900px){
@@ -68,8 +67,8 @@
 }
 
 #map {
-    height: 180px; width: 200px;
     border-radius: 30px;
+    margin-right: 150px;
     }
 .img {
     max-width: 400px;
@@ -110,7 +109,8 @@
     padding-bottom: 40px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: beige;
+    background-color: #F4F0E4;
+    filter: drop-shadow(2px 3px 4px rgb(221, 221, 221));
     border-radius: 10%;
     align-content: center;
     width: 200px;
@@ -121,22 +121,34 @@
 #services-locations-section {
     padding-top: 100px;
     padding-bottom: 100px;
-    background-color: beige;
+    background-image: radial-gradient( farthest-side, #F4F0E4, #EFFFF7);
     display: flex;
     flex-direction: row;
     align-items: center;
     align-content: space-evenly;
-    gap: 15vw;
+    gap: 8vw;
+    margin-right:-5vw;
+    margin-left: -5vw;
 }
 
 #services {
     flex-direction: column;
+    padding: 100px;
+}
+
+#specific-button {
+    margin-right: 20px;
+}
+
+#service1 {
+    margin-bottom: 50px;
 }
 
 
 #buttons {
-    padding: 20px;
-    margin-right: 10px;
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
 }
 
 #services h3, #location-services h3 {

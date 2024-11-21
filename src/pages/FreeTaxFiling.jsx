@@ -125,17 +125,22 @@ const FreeTaxFiling = () => {
     <section>
         <div id="services-locations-section">
             <div id="services">
-                <h3>Scope of Services</h3>
-                <Button buttonText="IRS Free Tax Preparation PDF" linkTo="https://www.someurl.com"/>
-                <h3>What to Bring to Your Appointment</h3>
-                <Button buttonText="Checklist for Free Tax Return" linkTo="https://www.someurl.com"/>
+                <div id="service1">
+                    <h3>Scope of Services</h3>
+                    <Button buttonText="IRS Free Tax Preparation PDF" linkTo="https://www.someurl.com"/>
+                </div>
+                <div id="service2">
+                    <h3>What to Bring to Your Appointment</h3>
+                    <Button buttonText="Checklist for Free Tax Return" linkTo="https://www.someurl.com"/>
+                </div>
             </div>
             <div id="location-services">
                 <h3>Find a location near you</h3>
-                <div id="map" style={{ height: '400px', width: '100%' }}></div>
-                
+                <div id="map" style={{ height: '400px', width: '500px' }}></div>
                 <div id="buttons">
-                    <Button buttonText="VITA sites" linkTo="https://www.someurl.com"/>
+                        <Button buttonText="VITA sites" linkTo="https://www.someurl.com"/>
+
+                    
                     <Button buttonText="Virtual tax preparation" linkTo="https://www.someurl.com"/>
                 </div>
                 <Button buttonText="United Way Bay Area Free Tax Help Sites" linkTo="https://www.someurl.com"/>
