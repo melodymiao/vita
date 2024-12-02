@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica Neue, sans-serif;
+}
+
+:root {
+    --primary-color: #2A9D6D;
+    --secondary-color: #F4F0E4;
+    --text-color: #000000;
+    --transparent: rgba(255, 255, 255, 0);
+}
+
+/*div {
+    border: 4px dotted var(--primary-color);
+} */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 30px;
+    border-bottom: 1px solid #888888;
+  }
+
+.title img {
+  height: 180px;
+}
+
+.navlinks {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-button {
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  padding: 1px 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.nav-button:hover {
+  color: var(--primary-color);
+}
+
+.nav-button::after {
+    font-weight: bold;
+    height: 10px;
+    background-color: var(--primary-color);
+}
+
+.donate {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 20px;
+    padding: 12px 30px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.donate:hover {
+    background-color: #FFFFFF;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.title {
+    font-weight: bold;
+}
+  
+.nav-button {
+  background-color: transparent;
+  color: #000000;
+  border: none;
+  padding: 1px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.nav-button:hover {
+    background-color: transparent;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.hero-text-container {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.big-text {
+    color: var(--text-color);
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.small-text {
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.image-text-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 30px;
+    margin-left: calc((100vw - 1200px) / 2);
+    margin-right: calc((100vw - 1200px) / 2);
+}
+
+.image-text-container img {
+    border-radius: 50px;
+    padding: 20px;
+    max-width: 500px;
+    max-height: 500px;
+    order: 2;
+}
+
+.volunter-reqs-container {
+    display: flex;
+    gap: 40px;
+    padding: 30px 50px;
+    margin-top: 100px;
+    margin-left: calc((100vw - 1200px) / 2);
+    margin-right: calc((100vw - 1200px) / 2);
+    flex-direction: column;
+
+}
+
+.reqs {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    align-items: center;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+}
+
+.about-decal-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    padding: 100px 30px;
+    margin-top: 100px;
+    gap: 30px;
+}
+
+.left-text {
+    flex: 2;
+}
+
+.text-left h1 {
+    font-size: 28px;
+    margin-left: 150px;
+}
+
+.text-left p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 10px;
+    margin-left: 150px;
+    margin-right: 100px;
+}
+
+.learn-more {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+
+.learn-more:hover {
+    background-color: #FFFFFF;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.divider {
+    width: 2px;
+    background-color: #888888;
+    height: auto;
+    align-self: stretch;
+}
+
+.course-info {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-right: 150px;
+    gap: 50px;
+}
+
+.course-info .label {
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+.course-info .value {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 450;
+}
+
+.faq-container {
+    margin: 10px auto;
+    max-width: 800px;
+    padding: 60px;
+}
+
+.faq-item {
+    border: 1px solid #888888;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.faq-toggle {
+    font-size: 24px;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.5;
+}
