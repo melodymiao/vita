@@ -159,17 +159,17 @@ const FreeTaxFiling = () => {
                 <body>File your tax return yourself.</body>
             </div>
             <div id="free-software-buttons">
-                <div id="federal-return">
+                <div id="federal-return" class = 'buttoms'>
                     <h4>Federal Return</h4>
                     <Button buttonText="IRS Direct File" linkTo="https://www.someurl.com"/>
                 </div>
-                <div id="state-return">
+                <div id="state-return" class = 'buttoms'>
                     <h4>State Return</h4>
                     <Button buttonText="CA Franchise Tax Board (FTB)" linkTo="https://www.someurl.com"/>
                 </div>
                 <div id="both">
                     <h4>Both</h4>
-                    <div id="both-section">
+                    <div id="both-section" class = 'buttoms'>
                         <Button buttonText="IRS Free File" linkTo="https://www.someurl.com"/>
                         <Button buttonText="OnLine Taxes (OLT)" linkTo="https://www.someurl.com"/>
                     </div>
