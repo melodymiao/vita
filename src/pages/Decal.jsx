@@ -5,19 +5,28 @@ import './Decal.css';
 
 const Decal = () => {
   useEffect(() => {
-    document.querySelectorAll('.faq-button').forEach((button) => {
-      button.addEventListener('click', function () {
-        const answer = this.nextElementSibling;
-        if (answer.style.display === 'block') {
+    const buttons = document.querySelectorAll('.faq-button');
+
+    // Event handler function
+    const toggleAnswer = (event) => {
+      const button = event.currentTarget;
+      const answer = button.closest('.faq-question').nextElementSibling;
+
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+      } else {
+        document.querySelectorAll('.faq-answer').forEach((answer) => {
           answer.style.display = 'none';
-        } else {
-          document.querySelectorAll('.faq-answer').forEach((answer) => {
-            answer.style.display = 'none';
-          });
-          answer.style.display = 'block';
-        }
-      });
-    });
+        });
+        answer.style.display = 'block';
+      }
+    };
+
+    buttons.forEach((button) => button.addEventListener('click', toggleAnswer));
+
+    return () => {
+      buttons.forEach((button) => button.removeEventListener('click', toggleAnswer));
+    };
   }, []);
 
   return (
@@ -50,24 +59,9 @@ const Decal = () => {
           <div className="text-left">
             <h1 className="big-text">About the DeCal</h1>
             <p className="small-text">
-              Every fall, our Education & Training Directors teach a 2-unit P/NP DeCal to prepare students for the IRS Certification Exam. During our weekly classes, we cover content tested on the Basic Certification Exam, discuss wealth inequality in relation to the federal income tax system, and practice filing returns using the TaxSlayer software. In December, our members take the IRS Exam to become certified and prepared to volunteer in the spring.
+              Every fall, our Education & Training Directors teach a 2-unit P/NP DeCal to prepare students for the IRS Certification Exam.
             </p>
             <button className="learn-more">Learn More</button>
-          </div>
-          <div className="divider"></div>
-          <div className="course-info">
-            <div>
-              <p className="label">Course Number </p>
-              <p className="value">SOCWEL 97/197</p>
-            </div>
-            <div>
-              <p className="label">Semester</p>
-              <p className="value">Fall 2024</p>
-            </div>
-            <div>
-              <p className="label">Units</p>
-              <p className="value">2</p>
-            </div>
           </div>
         </div>
 

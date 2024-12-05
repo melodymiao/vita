@@ -176,39 +176,32 @@
     margin: 10px auto;
     max-width: 800px;
     padding: 60px;
- }
- 
- 
- .faq-item {
+}
+
+.faq-item {
     border: 1px solid #888888;
     border-radius: 20px;
     padding: 20px;
     margin: 20px;
- }
- 
- 
- .faq-question {
+}
+
+.faq-question {
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
     font-size: 18px;
     color: var(--text-color);
- }
- 
- 
- .faq-toggle {
-    font-size: 24px;
-    color: var(--primary-color);
-    transition: transform 0.3s ease;
- }
- 
- 
- .faq-answer {
-    display: none;
-    margin-top: 10px;
-    font-size: 16px;
-    color: var(--text-color);
-    line-height: 1.5;
- }
- 
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.faq-answer.show {
+    max-height: 500px;
+    opacity: 1;
+}
