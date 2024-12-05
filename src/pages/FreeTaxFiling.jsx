@@ -137,7 +137,7 @@ const FreeTaxFiling = () => {
             </div>
             <div id="location-services">
                 <h3>Find a location near you</h3>
-                <div id="map" style={{ height: '400px', width: '500px' }}></div>
+                <div id="map" ></div>
                 <div id="buttons">
                     <Button buttonText="VITA sites" linkTo="https://www.someurl.com"/>
                     <Button buttonText="Virtual tax preparation sites" linkTo="https://www.someurl.com"/>

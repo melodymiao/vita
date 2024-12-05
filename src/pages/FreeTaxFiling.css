@@ -103,24 +103,32 @@
     }
 
     .icon{
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height:50px;
     }
 }
 
 @media (max-width: 1000px){
+    #location-services {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #0D6440;
+        margin-left: 10vw;
+    }
+
     #services-locations-section {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;    }
+    flex-wrap: wrap;  
+}
     #services {
         width: 100%;
    }
    #map{
-    width: 80vw;
-   }
-   .location-services {
-    margin-left: 1000px;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
    }
    #free-software {
     display: flex;
@@ -158,6 +166,8 @@
 }
 
 #map {
+    height: 400px;
+    width: 500px;
     border-radius: 30px;
     margin-right: 150px;
     }
