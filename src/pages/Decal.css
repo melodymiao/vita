@@ -21,7 +21,7 @@ body {
 
 .hero-text-container {
     flex-direction: column;
-    padding: 20px;
+    padding: 30px;
 }
 
 .big-text {
@@ -41,7 +41,7 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
-    padding: 30px 30px;
+    padding: 80px 30px;
     margin-left: calc((100vw - 1200px) / 2);
     margin-right: calc((100vw - 1200px) / 2);
 }
@@ -68,7 +68,7 @@ body {
 .reqs {
     display: flex;
     justify-content: space-between;
-    padding: 30px 50px;
+    padding: 20px 30px;
     padding-top: 60px;
     padding-bottom: 60px;
     align-items: center;

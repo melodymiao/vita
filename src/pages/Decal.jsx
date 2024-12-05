@@ -58,41 +58,68 @@ const Decal = () => {
           <h1 className="big-text">Frequently Asked Questions</h1>
           <div className="faq-item">
             <div className="faq-question">
-              <p>What certification level do you cover?</p>
+            <button class="faq-button">
+             What certification level do you cover? </button>
             </div>
             <div className="faq-answer">
-              <p>We cover the IRS Basic Certification level.</p>
+            <button class="faq-button">We cover the IRS Basic Certification level.</button>
+            </div>
+          </div>
+         
+          <div className="faq-item">
+            <div className="faq-question">
+            <button class="faq-button">Do I have to enroll in the fall DeCal for units to join?</button>
+            </div>
+            <div className="faq-answer">
+            <button class="faq-button">Yes, enrolling in the fall DeCal is required to earn units and join the program.</button>
             </div>
           </div>
 
           <div className="faq-item">
             <div className="faq-question">
-              <p>Do I have to enroll in the fall DeCal for units to join?</p>
+            <button class="faq-button">Can I get units for volunteering in the spring?</button>
             </div>
             <div className="faq-answer">
-              <p>Yes, enrolling in the fall DeCal is required to earn units and join the program.</p>
+            <button class="faq-button">No, units are only awarded for participation in the fall DeCal.</button>
             </div>
           </div>
 
           <div className="faq-item">
             <div className="faq-question">
-              <p>Can I get units for volunteering in the spring?</p>
+            <button class="faq-button">Are there classes in the spring?</button>
             </div>
             <div className="faq-answer">
-              <p>No, units are only awarded for participation in the fall DeCal.</p>
-            </div>
-          </div>
-
-          <div className="faq-item">
-            <div className="faq-question">
-              <p>Are there classes in the spring?</p>
-            </div>
-            <div className="faq-answer">
-              <p>No, the DeCal classes are only offered in the fall semester.</p>
+            <button class="faq-button">No, the DeCal classes are only offered in the fall semester.</button>
             </div>
           </div>
         </div>
       </section>
+
+      <h1>Frequently Asked Questions</h1>
+      <div id="FAQs-container"></div>
+
+
+      document.querySelectorAll('.faq-button').forEach(button ={'>'} {
+    button.addEventListener('click', function () {
+        // Toggle the corresponding FAQ answer
+        const answer = this.nextElementSibling;
+
+        // If the answer is already open, close it
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+        } else {
+            // Close all open answers first
+            document.querySelectorAll('.faq-answer').forEach(answer => {
+                answer.style.display = 'none';
+            });
+
+            // Open the clicked answer
+            answer.style.display = 'block';
+        }
+    })};
+);
+
+  
       <Footer />
     </>
   );
