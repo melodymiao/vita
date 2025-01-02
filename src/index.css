@@ -29,12 +29,11 @@ a:hover {
 }
 
 section {
-  outline: 4px dotted #2A9D6D;
   padding: 0 calc((100vw - 1160px)/2);
 }
 
 h1 {
-  font-size: 3.8em;
+  font-size: 3.4em;
   line-height: 1.1;
 }
 

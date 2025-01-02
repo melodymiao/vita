@@ -2,6 +2,13 @@ import Header from '../assets/components/Header'
 import Footer from '../assets/components/Footer'
 import Button from '../assets/components/Button'
 import LandingPhoto from '../assets/photos/home landing.jpg'
+import AboutPhoto from '../assets/photos/aboutphoto.jpg'
+import SponsorEY from '../assets/photos/EY Logo.png'
+import SponsorPWC from '../assets/photos/PwC Logo.png'
+import SponsorCFRM from '../assets/photos/CFRM Logo.png'
+import SponsorDeloitte from '../assets/photos/Deloitte Logo.png'
+import SponsorAndersen from '../assets/photos/Andersen Logo.png'
+
 import './Home.css'
 
 
@@ -45,6 +52,40 @@ const Home = () => {
             ))}
         </div>
     </section>
+
+    <section className='about-section'>
+        <div className="text-and-img">
+            <div className="about-text">
+                <h2>About Us</h2>
+                <p>UC Berkeley Volunteer Income Tax Assistance (VITA) Program is a student-run organization that was established in 2010 through the Public Service Center. 
+
+During the fall semester, we teach a DeCal (student-lead course) to prepare our students for the IRS Certification Exams. In the spring, our students volunteer with partnering VITA sites across the Bay Area and beyond.
+
+UC Berkeley VITA operates as a Registered Student Organization (RSO), a student service organization under the Public Service Center, and as a DeCal through the Social Welfare Department.</p>
+            </div>
+            <div>
+                <img className="landing-photo" src={AboutPhoto} alt="Berkeley VITA Team Photo"/>
+            </div>
+        </div>
+    </section>
+
+    <section className='sponsors-section'>
+            <div className="about-text">
+                <h2>Sponsors</h2>
+            </div>
+                <div className="image-row">
+                <img className="logo-photo" src={SponsorAndersen} alt="Andersen"/>
+                <img className="logo-photo" src={SponsorCFRM} alt="CFRM"/>
+                <img className="logo-photo" src={SponsorDeloitte} alt="Deloitte"/>
+                <img className="logo-photo" src={SponsorEY} alt="EY"/>
+                <img className="logo-photo" src={SponsorPWC} alt="PWC"/>
+            </div>
+
+          
+      
+
+    </section>
+
     <Footer />
     </>
 );

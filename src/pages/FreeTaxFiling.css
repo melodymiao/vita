@@ -1,17 +1,16 @@
 
 #title-section {
-    background-color: #2A9D6D;
+    background-image: radial-gradient( farthest-side, #F4F0E4, #EFFFF7);
     display: flex;
     flex-direction: row;
-
-    padding-right: 30px;
+    margin-left: -6vw;
+    margin-right: -6vw;
+    padding-right: 10vw;
+    padding-left: 15vw;
     padding-top: 100px;
-    padding-left: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 150px;
     gap: calc(100px + 2vw);
-    color: white;
-
-    box-sizing: border-box;
+    color: black;
 }
 
 @media (max-width: 900px){
@@ -21,56 +20,25 @@
         align-content: center;
         justify-content: center;
         align-items: center;
-}
+    }
 
-}
-@media (max-width: 900px){
     #title-section {
         display: flex;
         flex-direction: column;
         flex-direction: column-reverse;
         align-content: center;
     }
-}
 
-@media (max-width: 900px){
-    #requirements-cards{
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-    }
-}
-
-@media (max-width: 900px){
-    #card{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-}
-
-@media (max-width: 900px) {
-    .icon{
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media (max-width: 900px){
     #title-words{
         display: flex;
         flex-direction: column;
         text-align: center;
         justify-content: center;
         align-items: center;
+        max-width: 90%;
     }
 }
 
-#map {
-    height: 180px; width: 200px;
-    border-radius: 30px;
-    }
 .img {
     max-width: 400px;
     max-height: 400px;
@@ -79,18 +47,16 @@
 }
 #title-words {
     line-height: 20px;
-    max-width: 40%;
 }
+
+/* This is the requirements section */
 
 #requirements-section {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: calc(20px + 2vh);
-    padding-right: 30px;
-    padding-top: 100px;
-    padding-left: 50px;
-    padding-bottom: 100px;
+    padding: 40px 100px;
     text-align: center;
 
 }
@@ -110,35 +76,217 @@
     padding-bottom: 40px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: beige;
+    background-color: #F4F0E4;
+    filter: drop-shadow(2px 3px 4px rgb(221, 221, 221));
     border-radius: 10%;
     align-content: center;
     width: 200px;
     height: 200px;
+}
+
+@media (max-width: 1000px){
+    #requirements-cards{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 85%;
+    }
+
+    #card{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+        font-size: large;
+    }
+
+    .icon{
+        width: 50px;
+        height:50px;
+    }
+}
+
+@media (max-width: 1000px){
+    #location-services {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #0D6440;
+        margin-left: 10vw;
+    }
+
+    #services-locations-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;  
+}
+    #services {
+        width: 100%;
+   }
+   #map{
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+   }
+   #free-software {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;    }
+    #services {
+        width: 100%;
+   }
+    #free-software-buttons{
+        width: 80%;
+   }
+
+   .service-buttons {
+    width: 80%;
+}
+
+
+    
 
 }
+
+
+/* This is the services locations section */
 
 #services-locations-section {
     padding-top: 100px;
     padding-bottom: 100px;
-    background-color: beige;
+    background-image: radial-gradient( farthest-side, #F4F0E4, #EFFFF7);
     display: flex;
-    flex-direction: row;
     align-items: center;
     align-content: space-evenly;
-    gap: 15vw;
+    gap: 8vw;
+    margin-right:-5vw;
+    margin-left: -5vw;
 }
+
+#map {
+    height: 400px;
+    width: 500px;
+    border-radius: 30px;
+    margin-right: 150px;
+    }
 
 #services {
+    display: flex;
     flex-direction: column;
+    padding: 100px;
+    width: 80vw;
 }
 
+#specific-button {
+    margin-right: 20px;
+}
+
+#service1 {
+    margin-bottom: 50px;
+}
+
+button {
+    border-radius: 60px;
+    border: 1px solid transparent;
+    padding: 0.8em 2.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    color: white;
+    background-color: #2A9D6D;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    display: block;
+    width: 100%;
+  }
+  button:hover {
+    background-color: #0D6440;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto #0D6440;
+  }
+
+#button-bottom {
+    max-width: 500px;
+    /* display: flex;
+    justify-content: center;
+    align-items: stretch; */
+}
 
 #buttons {
-    padding: 20px;
-    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
+
+/* This is the free software section */
+
+#free-software {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 15vw;
+    padding-bottom: 20vw;
+    gap: 20vw;
+}
+
+#free-software-text {
+    margin-top: 30px;
+    align-content: center;
+}
+
+#free-software-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#federal-return {
+    padding: 10px;
+    border: 2px solid rgb(188, 188, 188);
+    border-radius: 30px;
+    padding: 0.8em 2.2em;
+}
+
+#state-return {
+    padding: 10px;
+    border: 2px solid rgb(188, 188, 188);
+    border-radius: 30px;
+    padding: 0.8em 2.2em;
+}
+
+#both {
+    padding: 10px;
+    border: 2px solid rgb(188, 188, 188);
+    border-radius: 30px;
+    padding: 0.8em 2.2em;
+}
+
+#free-software-buttons h4 {
+    margin-bottom: 10px;
+
+}
+
+#both-section {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 
 #services h3, #location-services h3 {
     margin-bottom: 10px; /* Add separation below headings */
+}
+
+@media (max-width: 1000px) {
+    #free-software{
+        justify-content: center;
+        align-items: center;
+        }
 }

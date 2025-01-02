@@ -9,7 +9,8 @@ import money from './money.png'
 import React, { useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import icon from "./pin.webp"
+import icon from "./pin.webp";
+import { Link } from 'react-router-dom';
 
 
 
@@ -125,22 +126,56 @@ const FreeTaxFiling = () => {
     <section>
         <div id="services-locations-section">
             <div id="services">
-                <h3>Scope of Services</h3>
-                <Button buttonText="IRS Free Tax Preparation PDF" linkTo="https://www.someurl.com"/>
-                <h3>What to Bring to Your Appointment</h3>
-                <Button buttonText="Checklist for Free Tax Return" linkTo="https://www.someurl.com"/>
+                <div id="service1">
+                    <h3>Scope of Services</h3>
+                    <Button buttonText="IRS Free Tax Preparation PDF" linkTo="https://www.someurl.com"/>
+                </div>
+                <div id="service2">
+                    <h3>What to Bring to Your Appointment</h3>
+                    <Button buttonText="Checklist for Free Tax Return" linkTo="https://www.someurl.com"/>
+                </div>
             </div>
             <div id="location-services">
                 <h3>Find a location near you</h3>
-                <div id="map" style={{ height: '400px', width: '100%' }}></div>
-                
+                <div id="map" ></div>
                 <div id="buttons">
                     <Button buttonText="VITA sites" linkTo="https://www.someurl.com"/>
-                    <Button buttonText="Virtual tax preparation" linkTo="https://www.someurl.com"/>
+                    <Button buttonText="Virtual tax preparation sites" linkTo="https://www.someurl.com"/>
                 </div>
-                <Button buttonText="United Way Bay Area Free Tax Help Sites" linkTo="https://www.someurl.com"/>
+                <div id="button-bottom">
+                    <Link className="button-link" to="https://www.someurl.com">
+                        <button className="button">United Way Bay Area Free Tax Help Sites</button>
+                    </Link>
+                    {/* <Button buttonText="United Way Bay Area Free Tax Help Sites" linkTo="https://www.someurl.com"/> */}
+
+                </div>
             </div>
         </div> 
+    </section>
+    <section>
+        <div id="free-software">
+            <div id="free-software-text">
+                <h3>Free Self-Filing Software</h3>
+                <body>File your tax return yourself.</body>
+            </div>
+            <div id="free-software-buttons">
+                <div id="federal-return" class = 'buttoms'>
+                    <h4>Federal Return</h4>
+                    <Button buttonText="IRS Direct File" linkTo="https://www.someurl.com"/>
+                </div>
+                <div id="state-return" class = 'buttoms'>
+                    <h4>State Return</h4>
+                    <Button buttonText="CA Franchise Tax Board (FTB)" linkTo="https://www.someurl.com"/>
+                </div>
+                <div id="both">
+                    <h4>Both</h4>
+                    <div id="both-section" class = 'buttoms'>
+                        <Button buttonText="IRS Free File" linkTo="https://www.someurl.com"/>
+                        <Button buttonText="OnLine Taxes (OLT)" linkTo="https://www.someurl.com"/>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <Footer />
     </>
