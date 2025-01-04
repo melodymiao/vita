@@ -152,7 +152,7 @@ const FreeTaxFiling = () => {
             </div>
         </div>
     </section>
-    <section>
+    <section id="free-tax-resources">
         <div id="free-software">
             <div id="free-software-text">
                 <h2>Free Self-Filing Software</h2>

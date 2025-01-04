@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink } from "react-router-hash-link";
 
 import Header from '../assets/components/Header'
 import Footer from '../assets/components/Footer'
@@ -17,6 +17,7 @@ import './Home.css'
 
 
 const Home = () => {
+    
     const circles = [
         { id: 1, number: '2,490', label: 'hours volunteered' },
         { id: 2, number: '1,093', label: 'returns filed' },
@@ -61,9 +62,9 @@ const Home = () => {
                 <Button buttonText="Get Help Today" linkTo="./free-tax-filing"/>
             </div>
             <div>
-                <Link to="/free-tax-filing" className='floating-icon' >
+                <HashLink className='floating-icon' to="/free-tax-filing#free-tax-resources" smooth>
                     <img src={FreeResources} alt="Free Resources"/>
-                </Link>
+                </HashLink>
                 <img className="landing-photo" src={LandingPhoto} alt="Berkeley VITA Team Photo"/>
             </div>
         </div>
