@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
+import headerlogo from '../photos/header logo.png'
 
 const Header = ({ currentPage }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <>
-      <section className='header-section'>
-        <img src='logo-campanile-i.png' className='logo' />
-        <div className='nav-buttons'>
+      <header className='header-section'>
+        <Link to="/" id="home">
+          <img src={headerlogo} className='logo' alt="VITA"/>
+        </Link>
+        
+        <button className='menu-toggle' onClick={toggleMenu}>
+          {isMenuOpen ? '✖' : '☰'}
+        </button>
+        <div className={`nav-buttons ${isMenuOpen ? 'open' : ''}`}>
           <Link to="/" className={`nav-button ${currentPage === "home" ? "active" : ""}`} id="home">
             <div className='nav-text'>Home</div>
             <div className="underline"></div>
@@ -24,24 +36,9 @@ const Header = ({ currentPage }) => {
 
           <Link to="/donate" id={`${currentPage === "donate" ? "donate-button" : "donate-button2"}`}>Donate</Link>
         </div>
-      </section>
+      </header>
     </>
   );
 }
 
 export default Header;
-
-{/* SAMPLE BEFORE:
-
-<section className='header-section'>
-  <h1>Filler Header</h1>
-  <div className='header-links'>
-    <Link to="/" className={`${currentPage === "home" ? "bold" : ""}`}>Home</Link>
-    <Link to="/sample" className={`${currentPage === "sample" ? "bold" : ""}`}>Sample Page</Link>
-    <Link to="/free-tax-filing" className={`${currentPage === "free-tax-filing" ? "bold" : ""}`}>Free Tax Filing</Link>
-    <Link to="/decal" className={`${currentPage === "decal" ? "bold" : ""}`}>Decal</Link>
-    <Link to="/donate" className={`${currentPage === "donate" ? "bold" : ""}`}>Donate</Link>
-  </div>
-</section>
-
-*/}

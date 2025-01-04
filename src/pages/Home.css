@@ -1,47 +1,44 @@
-.text-and-img {
-    display: flex;
-    align-items: center;
-    padding: 80px 0;
-    gap: 20px;
+.floating-icon {
+    position: absolute;
+    margin: -40px 0 0 -60px;
+    z-index: 1;
+    animation: float 3s ease-in-out infinite;
 }
 
-.text-and-img .landing-text {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.text-and-img .landing-photo {
-    width: 30em;
-    border-radius: 16px;
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Starting position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up */
+    }
+    100% {
+        transform: translateY(0); /* Return to starting position */
+    }
 }
 
 .logo-photo {
-    width: 10vw;
+    width: 100px;
+}
+
+#EY {
+    width: 80px;
+}
+
+#PWC {
+    width: 80px;
 }
 
 .at-a-glance-section {
-    padding-top: 80px;
-    padding-bottom: 100px;
-    background: linear-gradient(
-            to bottom right,
-            rgb(42, 157, 109, 0.5),
-            transparent 30%
-        ),
-        linear-gradient(
-            to top left,
-            rgb(42, 157, 109, 0.5),
-            transparent 30%
-        );
+    padding-top: 56px;
+    padding-bottom: 90px;
+    margin: 0 calc((100vw - 1000px)/2);
+    border-radius: 40px;
+    box-shadow: 0 0 16px rgba(167, 167, 167, 0.15);
 }
 
-.sponsors-section {
-    padding-top: 10vh;
-   
-}
 .at-a-glance-title {
     text-align: center;
-    padding-bottom: 40px;
 }
 
 .circle-container {
@@ -58,42 +55,56 @@
 svg {
     transform: rotate(-90deg);
 }
+
 .circle {
-    fill: none;
+    stroke-dasharray: 565.48; /* Circumference of the circle */
+    stroke-dashoffset: 565.48;
     stroke: #2a9d6d;
     stroke-linecap: round;
-    stroke-width: 10;
-    stroke-dasharray: 600; /* Circumference of the circle */
-    stroke-dashoffset: 600; /* Initially hidden */
-    animation: dash 2.5s ease-in-out forwards;
+    stroke-width: 8px;
+    fill: none;
+    transition: stroke-dashoffset 2s ease-in-out var(--animation-delay, 0s);
 }
+
+.animate-circle .circle {
+    stroke-dashoffset: 0;
+}
+
 .circle-wrapper {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.animate-circle .circle {
+    stroke-dashoffset: 0;
+}
+
 .number {
     position: absolute;
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 36px;
+    font-weight: 500;
     color: #2a9d6d;
     line-height: 1;
 }
 .label {
     margin-top: 15px;
-    font-size: 16px;
+    font-size: 20px;
     color: #6d6d6d;
 }
 
-.image-row {
-    display:flex;
-    width: 80vw;
-    justify-content: center;
-    align-items: center;
-    gap: 4vw;
-    padding-bottom: 10vh;
+.about-text {
+    margin-bottom: 30px;
 }
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 160px;
+}
+
 @keyframes dash {
     to {
         stroke-dashoffset: 0; /* Fully revealed */
@@ -101,24 +112,36 @@ svg {
 }
 
 @media (max-width: 900px) {
-    .text-and-img .landing-photo {
-        width: 24em;
+
+    .circle-container {
+        gap: 60px;
+    }
+
+    .floating-icon {
+        display: none;
     }
 
 }
 
-@media (max-width: 720px) {
-    .text-and-img {
-        flex-direction: column;
-        gap: 40px;
+@media (max-width: 1000px) {
+    .at-a-glance-section {
+        margin: 0;
     }
+}
 
-    .text-and-img .landing-photo {
-        width: 100%;
+@media (max-width: 720px) {
+    .at-a-glance-section {
+        margin: 0 40px;
     }
 
     .circle-container {
         flex-direction: column;
+    }
+
+    .image-row {
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
     }
 
  

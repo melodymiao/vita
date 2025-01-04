@@ -2,14 +2,14 @@ import Header from '../assets/components/Header'
 import Footer from '../assets/components/Footer'
 import Button from '../assets/components/Button'
 import './FreeTaxFiling.css'
-import picture from './vita_img.png'
-import hearing from "./hearing.png"
-import wheelchair from "./wheelchair.png"
-import money from './money.png'
+import picture from '../assets/photos/vita_img.png'
+import hearing from "../assets/photos/hearing.png"
+import wheelchair from "../assets/photos/wheelchair.png"
+import money from '../assets/photos/money.png'
 import React, { useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import icon from "./pin.webp";
+import icon from "../assets/photos/pin.webp";
 import { Link } from 'react-router-dom';
 
 
@@ -87,91 +87,99 @@ const FreeTaxFiling = () => {
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
-    <section>
-        <div id="title-section">
-            <div id="title-words">
+
+    <section className='landing-section'>
+        <div className="text-and-img">
+            <div className="landing-text">
                 <h1>Free Tax Preparation Services</h1>
-                <body>Have a certified volunteer file your tax return, 
-                    either in-person or virtually.</body>
+                <p>Have a certified volunteer file your tax return, either in-person or virtually.</p>
             </div>
-            <div id="title-img">
-                <img src={picture} className="img"/>
-            </div>
-
-        </div>
-    </section>
-    <section>
-        <div id="requirements-section">
-            <div id="requirements-text">
-                <h3>We offer free tax help to people who need 
-                    assistance in preparing their own tax returns, 
-                    including those who:</h3>
-            </div>
-            <div id="requirements-cards">
-                <div id="card">
-                    <img src={money} className="icon"/>
-                    <body>Generally make $67,000 or less</body>
-                </div>
-                <div id="card">
-                    <img src={wheelchair} className="icon"/>
-                    <body>Have disabilities</body>
-                </div>
-                <div id="card">
-                    <img src={hearing} className="icon"/>
-                    <body>Have language barriers</body>
-                </div>
+            <div>
+                <img className="landing-photo" src={picture} alt="Our Team"/>
             </div>
         </div>
     </section>
-    <section>
-        <div id="services-locations-section">
-            <div id="services">
-                <div id="service1">
-                    <h3>Scope of Services</h3>
-                    <Button buttonText="IRS Free Tax Preparation PDF" linkTo="https://www.someurl.com"/>
-                </div>
-                <div id="service2">
-                    <h3>What to Bring to Your Appointment</h3>
-                    <Button buttonText="Checklist for Free Tax Return" linkTo="https://www.someurl.com"/>
-                </div>
+    <section id="requirements-section">
+        <div id="requirements-text">
+            <h2>We offer <span className='green'>free</span> tax help for those who:</h2>
+        </div>
+        <div id="requirements-cards">
+            <div id="card">
+                <img src={money} className="icon"/>
+                <p>Generally make $67,000 or less</p>
             </div>
-            <div id="location-services">
-                <h3>Find a location near you</h3>
-                <div id="map" ></div>
-                <div id="buttons">
-                    <Button buttonText="VITA sites" linkTo="https://www.someurl.com"/>
-                    <Button buttonText="Virtual tax preparation sites" linkTo="https://www.someurl.com"/>
-                </div>
-                <div id="button-bottom">
-                    <Link className="button-link" to="https://www.someurl.com">
-                        <button className="button">United Way Bay Area Free Tax Help Sites</button>
-                    </Link>
-                    {/* <Button buttonText="United Way Bay Area Free Tax Help Sites" linkTo="https://www.someurl.com"/> */}
-
-                </div>
+            <div id="card">
+                <img src={wheelchair} className="icon"/>
+                <p>Have disabilities</p>
             </div>
-        </div> 
+            <div id="card">
+                <img src={hearing} className="icon"/>
+                <p>Have language barriers</p>
+            </div>
+        </div>
+    </section>
+    <section id="services-locations-section">
+        <div id="services">
+            <div id="service1">
+                <h3 className='black'>Scope of Services</h3>
+                <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                    <button className="tax-resource-button">IRS Free Tax Preparation PDF</button>
+                </Link>
+            </div>
+            <div id="service2">
+                <h3 className='black'>What to Bring to Your Appointment</h3>
+                <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                    <button className="tax-resource-button">Checklist for Free Tax Return</button>
+                </Link>
+            </div>
+        </div>
+        <div id="location-services">
+            <h2>Find a location near you</h2>
+            <div id="map" ></div>
+            <div id="buttons">
+                <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                    <button className="tax-resource-button">VITA sites</button>
+                </Link>
+                <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                    <button className="tax-resource-button">Virtual tax preparation sites</button>
+                </Link>
+            </div>
+            <div id="button-bottom">
+                <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                    <button className="tax-resource-button">United Way Bay Area Free Tax Help Sites</button>
+                </Link>
+                
+            </div>
+        </div>
     </section>
     <section>
         <div id="free-software">
             <div id="free-software-text">
-                <h3>Free Self-Filing Software</h3>
+                <h2>Free Self-Filing Software</h2>
                 <body>File your tax return yourself.</body>
             </div>
             <div id="free-software-buttons">
-                <div id="federal-return" class = 'buttoms'>
-                    <h4>Federal Return</h4>
-                    <Button buttonText="IRS Direct File" linkTo="https://www.someurl.com"/>
+                <div className="return-box">
+                    <h4 className='black'>Federal Return</h4>
+                    <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                        <button className="tax-resource-button">IRS Direct File</button>
+                    </Link>
                 </div>
-                <div id="state-return" class = 'buttoms'>
-                    <h4>State Return</h4>
-                    <Button buttonText="CA Franchise Tax Board (FTB)" linkTo="https://www.someurl.com"/>
+                <div className="return-box">
+                    <h4 className='black'>State Return</h4>
+                    <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                        <button className="tax-resource-button">CA Franchise Tax Board (FTB)</button>
+                    </Link>
                 </div>
-                <div id="both">
-                    <h4>Both</h4>
-                    <div id="both-section" class = 'buttoms'>
-                        <Button buttonText="IRS Free File" linkTo="https://www.someurl.com"/>
-                        <Button buttonText="OnLine Taxes (OLT)" linkTo="https://www.someurl.com"/>
+                <div className="return-box">
+                    <h4 className='black'>Both</h4>
+                    <div id="both-section">
+                        <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                            <button className="tax-resource-button">IRS Free File</button>
+                        </Link>
+                        <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                            <button className="tax-resource-button">Online Taxes (OLT)</button>
+                        </Link>
                     </div>
                 </div>
             </div>

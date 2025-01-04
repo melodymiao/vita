@@ -1,12 +1,9 @@
 .donate {
+    background-image: url('../assets/photos/donate-background.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     width: 100vw;
-    /* margin-left: calc((100vw - 100%) / -2); */
-    background: url('donate-background.png');
-    height: calc(100vh - (65px + 2em));
-}
-
-.background-img {
-    width: 100%;
     height: 100vh;
 }
 
@@ -47,5 +44,4 @@
 
 .button-div p {
     color: white;
-    font-size: 0.75em;
 }

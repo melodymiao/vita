@@ -3,14 +3,18 @@
 }
 
 .header-section {
-    padding: 1em 0;
-    width: 100vw;
-    margin-left: calc((100vw - 100%) / -2);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid 5px var(--main);
+    background-color: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 6px rgba(167, 167, 167, 0.05);
+    padding: 0 30px;
 }
 
 .nav-buttons {
@@ -18,12 +22,10 @@
     display: flex;
     align-items: center;
     gap: 3em;
-    margin-right: 5em;
     font-size: 1em;
 }
 
 .logo {
-    margin-left: 2em;
     height: 60px;
 }
 
@@ -73,7 +75,7 @@
 /* lowkey better donate button??? */
 #donate-button2 {
     padding: 0.5em 1.5em;
-    background: transparent;
+    background: white;
     border-radius: 100px;
     color: var(--main);
     border: 3px solid var(--main);
@@ -85,3 +87,40 @@
     border: 3px solid transparent;
     color: white;
 }
+
+/* Toggle Menu Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--main);
+    font-size: 32px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 720px) {
+    .nav-buttons {
+        display: none;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(255, 255, 255, 0.94);
+        position: fixed;
+        top: 60px;
+        right: 0;
+        padding-top: 60px;
+        border-radius: 5px;
+
+    }
+  
+    .nav-buttons.open {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+    
+  }
