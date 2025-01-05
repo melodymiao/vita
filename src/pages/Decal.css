@@ -115,6 +115,7 @@
   
   .course-info {
     display: flex;
+    padding-right: 40px;
     flex-direction: column;
     gap: 30px;
   }

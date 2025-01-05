@@ -10,7 +10,7 @@ const Donate = () => {
     <div className="donate">
         <div className="donate-content">
             <div className="explanatory-text">
-                <p id="header">Donate</p>
+                <h1 id="header">Donate</h1>
                 <p>Because our services are pro bono, we appreciate any and all support! Donations go towards travel reimbursements for our volunteers, honoraria for our guest speakers, and other operational expenses</p>
             </div>
             <div className="button-div">

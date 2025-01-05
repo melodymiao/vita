@@ -1,36 +1,31 @@
 .donate {
     background-image: url('../assets/photos/donate-background.png');
+    position: relative;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .donate-content {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    border-radius: 30px;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 100px;
 }
 
 .explanatory-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
-}
-
-#header {
-    font-size: 2.5rem;
-    margin-bottom: 8px;
-    color: white;
-}
-
-.explanatory-text p {
-    color: white;
     text-align: center;
 }
 
@@ -38,10 +33,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    gap: 16px;
+    margin: 20px 0;
+    gap: 20px;
+    text-align: center;
 }
 
-.button-div p {
-    color: white;
+@media (max-width: 1160px) {
+    .donate-content {
+        margin: 0 20px;
+        padding: 100px 40px;
+    }
 }
