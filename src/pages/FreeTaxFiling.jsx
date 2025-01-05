@@ -122,13 +122,13 @@ const FreeTaxFiling = () => {
         <div id="services">
             <div id="service1">
                 <h3 className='black'>Scope of Services</h3>
-                <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                <Link className="button-link" to="https://www.irs.gov/pub/irs-pdf/p3676bsp.pdf" target='_blank'>
                     <button className="tax-resource-button">IRS Free Tax Preparation PDF</button>
                 </Link>
             </div>
             <div id="service2">
                 <h3 className='black'>What to Bring to Your Appointment</h3>
-                <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                <Link className="button-link" to="https://www.irs.gov/individuals/checklist-for-free-tax-return-preparation" target='_blank'>
                     <button className="tax-resource-button">Checklist for Free Tax Return</button>
                 </Link>
             </div>
@@ -137,15 +137,15 @@ const FreeTaxFiling = () => {
             <h2>Find a location near you</h2>
             <div id="map" ></div>
             <div id="buttons">
-                <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                <Link className="button-link" to="https://irs.treasury.gov/freetaxprep/" target='_blank'>
                     <button className="tax-resource-button">VITA sites</button>
                 </Link>
-                <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                <Link className="button-link" to="https://www.getyourrefund.org/en" target='_blank'>
                     <button className="tax-resource-button">Virtual tax preparation sites</button>
                 </Link>
             </div>
             <div id="button-bottom">
-                <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                <Link className="button-link" to="https://uwba.org/what-we-do/free-tax-help/#map" target='_blank'>
                     <button className="tax-resource-button">United Way Bay Area Free Tax Help Sites</button>
                 </Link>
                 
@@ -161,23 +161,23 @@ const FreeTaxFiling = () => {
             <div id="free-software-buttons">
                 <div className="return-box">
                     <h4 className='black'>Federal Return</h4>
-                    <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                    <Link className="button-link" to="https://directfile.irs.gov/" target='_blank'>
                         <button className="tax-resource-button">IRS Direct File</button>
                     </Link>
                 </div>
                 <div className="return-box">
                     <h4 className='black'>State Return</h4>
-                    <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                    <Link className="button-link" to="https://www.ftb.ca.gov/file/index.html" target='_blank'>
                         <button className="tax-resource-button">CA Franchise Tax Board (FTB)</button>
                     </Link>
                 </div>
                 <div className="return-box">
                     <h4 className='black'>Both</h4>
                     <div id="both-section">
-                        <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                        <Link className="button-link" to="https://www.irs.gov/filing/irs-free-file-do-your-taxes-for-free" target='_blank'>
                             <button className="tax-resource-button">IRS Free File</button>
                         </Link>
-                        <Link className="button-link" to="https://www.someurl.com" target='_blank'>
+                        <Link className="button-link" to="https://www.olt.com/main/VITA/getstarted.php?affiliate=VITAFREE&linkID=S73019360" target='_blank'>
                             <button className="tax-resource-button">Online Taxes (OLT)</button>
                         </Link>
                     </div>
